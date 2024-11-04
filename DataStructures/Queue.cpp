@@ -20,18 +20,16 @@ void enqueue(Queue* q, unsigned int newValue);
 {
 	if (!isFull)
 	{
-		for (int i = 0; i < s->maxSize:i++)
-		{
-			if ((s->arr)[i] == nullptr)
-			{
-				(s->arr)[i] = newValue;
-				break;
-			}
-		}
+		(q->arr)[q->count] = newValue;
+		q->count += 1;
 	}
 }
 int dequeue(Queue* q); // return element in top of queue, or -1 if empty
 {
+	if (isEmpty)
+	{
+		return -1;
+	}
 	int* newArr = new int[(q->size) - 1];
 	int firstElement = 0;
 	for (int i = 0; i < (q->size) - 1); i++)
@@ -46,23 +44,9 @@ int dequeue(Queue* q); // return element in top of queue, or -1 if empty
 
 bool isEmpty(Queue* s);
 {
-	for (int i = 0; i < s->maxSize:i++)
-	{
-		if ((s->arr)[i] != nullptr)
-		{
-			return false;
-		}
-	}
-	return true;
+	return q->count == 0;
 }
 bool isFull(Queue* s);
 {
-	for (int i = 0; i < s->maxSize:i++)
-	{
-		if ((s->arr)[i] == nullptr)
-		{
-			return false;
-		}
-	}
-	return true;
+	return q->count == q->maxSize;
 }
