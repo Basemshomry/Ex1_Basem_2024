@@ -6,22 +6,29 @@ void push(Stack* s, unsigned int element)
 }
 int pop(Stack* s) // Return -1 if stack is empty
 {
+	List* newNode = *(s->node);
+	int number = 0;
 	if (isEmpty(s))
 	{
 		return -1;
 	}
+	number = newNode->number;
 	removeFirstNumber(s->node);
 	*(s->count) -= 1;
+	return number;
 }
 
 void initStack(Stack* s)
 {
-	s->node = nullptr;
+	s->node = new List*;
+	*(s->node) = nullptr;
+	s->count = new int;
 	*(s->count) = 0;
 }
 void cleanStack(Stack* s)
 {
-	List* curr = s->node;
+	List* newNode = *(s->node);
+	List* curr = newNode;
 	List* temp = nullptr;
 	while (curr)
 	{
@@ -29,7 +36,10 @@ void cleanStack(Stack* s)
 		delete curr;
 		curr = temp;
 	}
+	delete s->node;
 	s->node = nullptr;
+	delete s->count;
+	s->count = nullptr;
 }
 
 bool isEmpty(Stack* s)

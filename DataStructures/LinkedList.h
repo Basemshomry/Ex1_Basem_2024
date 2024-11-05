@@ -10,7 +10,7 @@ typedef struct List
 } List;
 
 List* creatNode(int number);
-void insertNumber(List* node, int newNumber);
-void removeFirstNumber(List* node);
+void insertNumber(List** node, int newNumber);
+void removeFirstNumber(List** node);
 
 #endif /* QUEUE_H */

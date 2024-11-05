@@ -1,24 +1,26 @@
 #include <iostream>
-#include "Queue.h"
+#include "Stack.h"
 
 int main()
 {
 
-    Queue* elm = new Queue;
-    int dequeuedElement = 0;
-    initQueue(elm, 3); //initiate stack of size 3
-    enqueue(elm, 1);
-    enqueue(elm, 4);
-    enqueue(elm, 9);
+    Stack* stk = new Stack;
+    List* newNode = nullptr;
+    List* temp = nullptr;
+    initStack(stk); //initiate stack of size 3
+    push(stk, 1);
+    push(stk, 4);
+    push(stk, 9);
 
 
     std::cout << "Welcome to the first program in C++ !!!" << std::endl;
-    while (!isEmpty(elm))
+    newNode = *(stk->node);
+    while (!isEmpty(stk))
     {
-        std::cout << "Element was poped : " << dequeue(elm) << std::endl;
+        std::cout << "Element was poped : " << pop(stk) << std::endl;
     }
-    cleanQueue(elm);
-    delete(elm);
-
+    cleanStack(stk);
+    delete(stk);
     return 0;
 }
+

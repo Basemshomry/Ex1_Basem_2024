@@ -6,23 +6,17 @@ List* creatNode(int number)
 	newNode->next = nullptr;
 	return newNode;
 }
-void insertNumber(List* node, int newNumber)
+void insertNumber(List** node, int newNumber)
 {
 	List* newNode = creatNode(newNumber);
-	if (node)
-	{
-		node = newNode;
-	}
-	else
-	{
-		newNode->next = node;
-		node = newNode;
-	}
+	newNode->next = *node;
+	*node = newNode;
 }
-void removeFirstNumber(List* node)
+void removeFirstNumber(List** node)
 {
-	List* dNode = node;
-	node = node->next;
+	List* newNode = *node;
+	List* dNode = newNode;
+	*node = newNode->next;
 	delete dNode;
-	node = nullptr;
+	dNode = nullptr;
 }
