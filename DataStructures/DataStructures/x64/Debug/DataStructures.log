@@ -1,7 +1,2 @@
 ﻿  Main.cpp
-Main.obj : error LNK2019: unresolved external symbol "void __cdecl initQueue(struct Queue *,unsigned int)" (?initQueue@@YAXPEAUQueue@@I@Z) referenced in function main
-Main.obj : error LNK2019: unresolved external symbol "void __cdecl cleanQueue(struct Queue *)" (?cleanQueue@@YAXPEAUQueue@@@Z) referenced in function main
-Main.obj : error LNK2019: unresolved external symbol "void __cdecl enqueue(struct Queue *,unsigned int)" (?enqueue@@YAXPEAUQueue@@I@Z) referenced in function main
-Main.obj : error LNK2019: unresolved external symbol "int __cdecl dequeue(struct Queue *)" (?dequeue@@YAHPEAUQueue@@@Z) referenced in function main
-Main.obj : error LNK2019: unresolved external symbol "bool __cdecl isEmpty(struct Queue *)" (?isEmpty@@YA_NPEAUQueue@@@Z) referenced in function main
-C:\Users\Cyber_User\Desktop\EkronotExcercises\Ex1_Basem_2024\DataStructures\x64\Debug\DataStructures.exe : fatal error LNK1120: 5 unresolved externals
+  DataStructures.vcxproj -> C:\Users\Cyber_User\Desktop\EkronotExcercises\Ex1_Basem_2024\DataStructures\x64\Debug\DataStructures.exe

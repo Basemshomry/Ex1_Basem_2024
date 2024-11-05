@@ -1,54 +1,58 @@
 #include "Queue.h"
-typedef struct Queue
+
+void initQueue(Queue* q, unsigned int size)
 {
-	int* arr;
-	int maxSize;
-	int count;
-} Queue;
-void initQueue(Queue* q, unsigned int size);
-{
-	q->arr = new int[size];
-	q->maxSize = size;
-	count = 0;
+	q->array = new int[size];
+	q->maxSize = new int;
+	q->count = new int;
+	*(q->maxSize) = size;
+	*(q->count) = 0;
 }
-void cleanQueue(Queue* q);
+void cleanQueue(Queue* q)
 {
-	delete[] q->arr;
+	delete[] q->array;
+	delete q->count;
+	delete q->maxSize;
+	q->array = nullptr;
+	q->maxSize = nullptr;
+	q->count = nullptr;
 }
 
-void enqueue(Queue* q, unsigned int newValue);
+void enqueue(Queue* q, unsigned int newValue)
 {
-	if (!isFull)
-	{
-		(q->arr)[q->count] = newValue;
-		q->count += 1;
-	}
+	(q->array)[*(q->count)] = newValue;
+	*(q->count) += 1;
 }
-int dequeue(Queue* q); // return element in top of queue, or -1 if empty
+int dequeue(Queue* q) // return element in top of queue, or -1 if empty
 {
-	int firstElement = 0;
-	int newSize = (q->maxSize) - 1;
-	int* newArr = new int[(q->maxSize) - 1];
-	if (isEmpty)
+	int firstElement = 0,i = 0;
+	int newSize = *(q->maxSize) - 1;
+	int* newArr = new int[*(q->maxSize) - 1];
+	if (isEmpty(q))
 	{
 		return -1;
 	}
-	for (int i = 0; i < (q->maxSize) - 1); i++)
+	for (i = 0; i < newSize; i++)
 	{
-		newArr[i] = (q->arr)[i + 1];
+		newArr[i] = (q->array)[i + 1];
 	}
-	firstElement = (q->arr)[i];
-	delete[] q->arr;
-	q->arr = newArr;
-	q->maxSize = newSize;
+	firstElement = (q->array)[0];
+	delete[] q->array;
+	q->array = newArr;
+	*(q->maxSize) = newSize;
+	*(q->count) -= 1;
 	return firstElement;
 }
 
-bool isEmpty(Queue* s);
+bool isEmpty(Queue* s)
 {
-	return q->count == 0;
+	if (*(s->count) == 0)
+	{
+		return true;
+	}
+	return false;
 }
-bool isFull(Queue* s);
+bool isFull(Queue* s)
 {
-	return q->count == q->maxSize;
+	return *(s->count) == *(s->maxSize);
 }
