@@ -23,6 +23,6 @@ void removeFirstNumber(List* node)
 {
 	List* dNode = node;
 	node = node->next;
-	delete node;
+	delete dNode;
 	node = nullptr;
 }
