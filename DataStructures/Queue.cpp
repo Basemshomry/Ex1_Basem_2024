@@ -26,19 +26,21 @@ void enqueue(Queue* q, unsigned int newValue);
 }
 int dequeue(Queue* q); // return element in top of queue, or -1 if empty
 {
+	int firstElement = 0;
+	int newSize = (q->maxSize) - 1;
+	int* newArr = new int[(q->maxSize) - 1];
 	if (isEmpty)
 	{
 		return -1;
 	}
-	int* newArr = new int[(q->size) - 1];
-	int firstElement = 0;
-	for (int i = 0; i < (q->size) - 1); i++)
+	for (int i = 0; i < (q->maxSize) - 1); i++)
 	{
 		newArr[i] = (q->arr)[i + 1];
 	}
 	firstElement = (q->arr)[i];
 	delete[] q->arr;
 	q->arr = newArr;
+	q->maxSize = newSize;
 	return firstElement;
 }
 
