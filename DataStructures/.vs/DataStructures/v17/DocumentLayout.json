@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Utils.cpp",
               "ToolTip": "C:\\Users\\Cyber_User\\Desktop\\EkronotExcercises\\Ex1_Basem_2024\\DataStructures\\Utils.cpp",
               "RelativeToolTip": "Utils.cpp",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAAAcAAAAYAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-06T14:03:38.493Z",
               "EditorCaption": ""
@@ -80,9 +80,9 @@
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\Cyber_User\\Desktop\\EkronotExcercises\\Ex1_Basem_2024\\DataStructures\\Main.cpp",
               "RelativeDocumentMoniker": "Main.cpp",
-              "ToolTip": "C:\\Users\\Cyber_User\\Desktop\\EkronotExcercises\\Ex1_Basem_2024\\DataStructures\\Main.cpp",
-              "RelativeToolTip": "Main.cpp",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "ToolTip": "C:\\Users\\Cyber_User\\Desktop\\EkronotExcercises\\Ex1_Basem_2024\\DataStructures\\Main.cpp*",
+              "RelativeToolTip": "Main.cpp*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-04T19:30:41.355Z",
               "EditorCaption": ""
@@ -110,8 +110,7 @@
               "RelativeToolTip": "Stack.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-05T14:57:03.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:57:03.14Z"
             },
             {
               "$type": "Document",
@@ -123,8 +122,7 @@
               "RelativeToolTip": "LinkedList.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-05T14:39:08.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:39:08.858Z"
             },
             {
               "$type": "Document",
@@ -136,8 +134,7 @@
               "RelativeToolTip": "LinkedList.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-05T14:38:36.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:38:36.662Z"
             },
             {
               "$type": "Document",
@@ -149,8 +146,7 @@
               "RelativeToolTip": "Queue.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-05T05:35:43.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T05:35:43.703Z"
             },
             {
               "$type": "Document",

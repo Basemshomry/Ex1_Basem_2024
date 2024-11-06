@@ -1,18 +1,24 @@
 #include "Stack.h"
 #include <iostream>
 #include "Utils.h"
+#include "Queue.h"
 #define MAXSIZE  10
 void stackCheck();
+void utilsCheck();
 int main()
+{
+    return 0;
+}
+void utilsCheck()
 {
     int* num = reverse10();
     int i = 0;
     std::cout << "the array after reverse :" << std::endl;
     for (i = 0; i < MAXSIZE; i++)
     {
-        std::cout << num[i] + ",";
+        std::cout << num[i] << ",";
     }
-    return 0;
+    delete[] num;
 }
 void stackCheck()
 {

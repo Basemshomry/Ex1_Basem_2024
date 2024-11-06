@@ -22,16 +22,19 @@ int* reverse10()
 {
 	int* nums = new int[MAXSIZE];
 	Stack* stk = new Stack;
-	int i = 0;
+	int i = 0,number = 0;
 	initStack(stk);
 	std::cout << "enter ten integer numbers : ";
 	for (i = 0; i < MAXSIZE; i++)
 	{
-		std::cin >> nums[i];
+		std::cin >> number;
+		push(stk, number);
 	}
 	for (i = 0; i < MAXSIZE; i++)
 	{
 		nums[i] = pop(stk);
 	}
+	cleanStack(stk);
+	delete stk;
 	return nums;
 }
