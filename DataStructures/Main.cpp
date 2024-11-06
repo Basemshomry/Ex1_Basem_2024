@@ -1,9 +1,21 @@
-#include <iostream>
 #include "Stack.h"
-
+#include <iostream>
+#include "Utils.h"
+#define MAXSIZE  10
+void stackCheck();
 int main()
 {
-
+    int* num = reverse10();
+    int i = 0;
+    std::cout << "the array after reverse :" << std::endl;
+    for (i = 0; i < MAXSIZE; i++)
+    {
+        std::cout << num[i] + ",";
+    }
+    return 0;
+}
+void stackCheck()
+{
     Stack* stk = new Stack;
     List* newNode = nullptr;
     List* temp = nullptr;
@@ -21,6 +33,5 @@ int main()
     }
     cleanStack(stk);
     delete(stk);
-    return 0;
 }
 
