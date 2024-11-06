@@ -1,4 +1,7 @@
-﻿  Main.cpp
+﻿  LinkedList.cpp
+  Main.cpp
+  Queue.cpp
+  Stack.cpp
   Utils.cpp
 C:\Users\Cyber_User\Desktop\EkronotExcercises\Ex1_Basem_2024\DataStructures\Utils.cpp(10,16): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Cyber_User\Desktop\EkronotExcercises\Ex1_Basem_2024\DataStructures\Utils.cpp(14,16): warning C4018: '<': signed/unsigned mismatch

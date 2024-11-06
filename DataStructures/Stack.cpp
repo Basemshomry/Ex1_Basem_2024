@@ -1,9 +1,15 @@
 #include "Stack.h"
+/*
+* this function adds a element to the first of the stack
+*/
 void push(Stack* s, unsigned int element)
 {
 	insertNumber(s->node, element);
 	*(s->count) += 1;
 }
+/*
+* this function remove an element from the first of the stack 
+*/
 int pop(Stack* s) // Return -1 if stack is empty
 {
 	List* newNode = *(s->node);
@@ -17,7 +23,9 @@ int pop(Stack* s) // Return -1 if stack is empty
 	*(s->count) -= 1;
 	return number;
 }
-
+/*
+* this function do aplce in memory to the pointers and athol
+*/
 void initStack(Stack* s)
 {
 	s->node = new List*;
@@ -25,6 +33,9 @@ void initStack(Stack* s)
 	s->count = new int;
 	*(s->count) = 0;
 }
+/*
+* this function cleans all the memory of the stack (all the nodes and the param)
+*/
 void cleanStack(Stack* s)
 {
 	List* newNode = *(s->node);

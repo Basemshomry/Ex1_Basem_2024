@@ -1,5 +1,7 @@
 #include "Queue.h"
-
+/*
+* this function do place in memory to the array with his size and place to the tow pointers
+*/
 void initQueue(Queue* q, unsigned int size)
 {
 	q->array = new int[size];
@@ -8,6 +10,9 @@ void initQueue(Queue* q, unsigned int size)
 	*(q->maxSize) = size;
 	*(q->count) = 0;
 }
+/*
+* this function cleans the memory
+*/
 void cleanQueue(Queue* q)
 {
 	delete[] q->array;
@@ -17,12 +22,18 @@ void cleanQueue(Queue* q)
 	q->maxSize = nullptr;
 	q->count = nullptr;
 }
-
+/*
+* this function adds to the queue new number by the value of count (count the current index)
+*/
 void enqueue(Queue* q, unsigned int newValue)
 {
 	(q->array)[*(q->count)] = newValue;
 	*(q->count) += 1;
 }
+/*
+* this function delete from the queue the first number by a loop and new array but with 
+* the size -1 and put all the values in it without the first value
+*/
 int dequeue(Queue* q) // return element in top of queue, or -1 if empty
 {
 	int firstElement = 0,i = 0;
@@ -43,7 +54,9 @@ int dequeue(Queue* q) // return element in top of queue, or -1 if empty
 	*(q->count) -= 1;
 	return firstElement;
 }
-
+/*
+* checks if the queue is empty
+*/
 bool isEmpty(Queue* s)
 {
 	if (*(s->count) == 0)
@@ -52,6 +65,9 @@ bool isEmpty(Queue* s)
 	}
 	return false;
 }
+/*
+* checks if the queue full of values
+*/
 bool isFull(Queue* s)
 {
 	return *(s->count) == *(s->maxSize);

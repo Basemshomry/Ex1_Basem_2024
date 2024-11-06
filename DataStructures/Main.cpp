@@ -7,6 +7,7 @@ void stackCheck();
 void utilsCheck();
 int main()
 {
+    utilsCheck();
     return 0;
 }
 void utilsCheck()
